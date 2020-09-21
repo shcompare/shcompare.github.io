@@ -1,0 +1,9 @@
+[
+	{"Bell":[
+		{"down":1000,"up":100,"cap_GB":-1,"price":999},
+		{"down":500,"up":50,"cap_GB":-1,"price":888}
+		]},
+	{"Rogers":[]},
+	{"TSI":[]},
+	{"Start":[]}
+]
