@@ -12,45 +12,130 @@ function init(){
 	r.open("GET", url, true);
 	r.send();
 }
+
 /**
 * @param {JSON} j
 */
 function onData(j){
+	addSheet(j);
+	addPivot(j);
+}
+
+/**
+* @param {JSON} j
+*/
+function addSheet(j) {
 	var d = document;
 	{
 		let tr = d.getElementById("h");
-		for (let h in j[0]) {
+		for (let h in j.data[0]) {
 			let th = d.createElement("th");
 			th.append(d.createTextNode(h));
 			tr.append(th);
 		}
 	}
 	var b = d.getElementById("b");
-	for (let i in j) {
+	for (let i in j.data) {
 		let ok = true;
 		let tr = d.createElement("tr");
-		for (let h in j[0]) {
-			if (! j[i][h]) {
+		for (let h in j.data[0]) {
+			if (! j.data[i][h]) {
 				ok = false;
 			}	
 			let td = d.createElement("td");
-			td.append(d.createTextNode(j[i][h]));
+			td.append(d.createTextNode(j.data[i][h]));
 			tr.append(td);
 		}
 		if (ok) {
 			b.append(tr);
 		}
 	}
-	var thead = d.getElementsByTagName('thead')[0];
+	var thead = d.getElementsByTagName('thead')[1];
 	addSort(thead);
 	addFilter(thead);
 }
 
 /**
-* @param {Element} t thead
+* @param {JSON} j
 */
-function addFilter(t) {
-	//TODO
+function addPivot(j) {
+	if (!j.pivot) {
+		return;
+	}
+	var d = document;
+	j.pivot.titles = [] ;
+	{
+		let tr = d.getElementById("hp");
+		for (let h in j.data[0]) {
+			if (j.pivot.title == h || j.pivot.diff == h) {
+				continue;
+			}
+			let th = d.createElement("th");
+			th.append(d.createTextNode(h));
+			tr.append(th);
+		}
+		for (let i in j.data) {
+			let t = j.data[i][j.pivot.title];
+			if (j.pivot.titles.includes(t)) {
+				continue;
+			}
+			if (!t) {
+				continue;
+			}
+			j.pivot.titles.push(t);
+			let th = d.createElement("th");
+			th.append(d.createTextNode(t));
+			tr.append(th);
+		}
+	}
+	j.pivot.diffs = {} ;
+	for (let i in j.data) {
+		let m = [];
+		for (let h in j.data[0]) {
+			if (j.pivot.title == h || j.pivot.diff == h) {
+				continue;
+			}
+			let v = j.data[i][h];
+			if (typeof v == "number") {
+				v = ("" + v);
+			}
+			if (!v) {
+				continue;
+			}
+			m.push(v);
+		}
+		if (m.length < 1) {
+			continue;
+		}
+		let ms = JSON.stringify(m);
+		if (!j.pivot.diffs[ms]) {
+			j.pivot.diffs[ms] = {};
+		}
+		j.pivot.diffs[ms][j.data[i][j.pivot.title]] = j.data[i][j.pivot.diff];
+	}
+	var b = d.getElementById("bp");
+	for (let m in j.pivot.diffs) {
+		let tr = d.createElement("tr");
+		let me = JSON.parse(m);
+		for (let i in me) {
+			let td = d.createElement("td");
+			td.append(d.createTextNode(me[i]));
+			tr.append(td);
+		}
+		for (let i in j.pivot.titles) {
+			let td = d.createElement("td");
+			let v = j.pivot.diffs[m][j.pivot.titles[i]];
+			if (!v) {
+				v = "";
+			}
+			td.append(d.createTextNode(v));
+			tr.append(td);
+		}
+		b.append(tr);
+	}
+	var thead = d.getElementsByTagName('thead')[0];
+	addSort(thead);
+	addFilter(thead);
 }
 
 /**
@@ -68,8 +153,7 @@ function addSort(t) {
 * @param {Element} a
 * @param {Number} col
 * @param {Boolean} asc
-*/
-// eslint-disable-next-line no-unused-vars
+*/ // eslint-disable-next-line no-unused-vars
 function sortTable(a, col, asc) {
 	var tbody = a.parentElement.parentElement.parentElement.parentElement;
 	tbody = tbody.getElementsByTagName('tbody')[0];
@@ -104,4 +188,11 @@ function sortTable(a, col, asc) {
 		}
 	}
 	return false;
+}
+
+/**
+* @param {Element} t thead
+*/
+function addFilter(t) {
+	//TODO
 }

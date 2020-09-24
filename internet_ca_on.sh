@@ -14,7 +14,7 @@ function finalize {
 }
 trap finalize EXIT
 
-echo "["
+echo "{\"pivot\":{\"title\":\"isp\",\"diff\":\"price (CAD)\"},\"data\":["
 {
 #bell
 while read -r L ; do
@@ -97,4 +97,4 @@ done < <(curl -s 'https://primus.ca/ont_en/internet.html' \
 	| perl -pe 's/(html)".*/$1/g;s/.*"//g' \
 	| grep "html")
 } | perl -pe 's/\}/},/g'
-echo "{}]"
+echo "{}]}"

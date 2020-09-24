@@ -10,6 +10,6 @@ if ! [[ "$(pwd)" =~ .*shcompare\.github\.io$ ]] ; then
 fi
 while read -r F ;do
 	O="$(echo "$F" | perl -pe 's/\.sh/.json/g')"
-	echo bash "$F" \> "$O"
+	echo bash "$F" | jq "." \> "$O"
 	bash "$F" > "$O"
 done < <(find . -name '*.sh' | grep -v "all.sh")

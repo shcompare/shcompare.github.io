@@ -1,191 +1,198 @@
-[
 {
-  "isp":"bell",
-  "down (Mbps)":"1500",
-  "up (Mbps)":"940",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":124.95
-},
-{
-  "isp":"bell",
-  "down (Mbps)":"1000",
-  "up (Mbps)":"750",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":114.95
-},
-{
-  "isp":"bell",
-  "down (Mbps)":"500",
-  "up (Mbps)":"500",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":104.95
-},
-{
-  "isp":"bell",
-  "down (Mbps)":"150",
-  "up (Mbps)":"150",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":94.95
-},
-{
-  "isp":"bell",
-  "down (Mbps)":"50",
-  "up (Mbps)":"10",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":79.95
-},
-{
-  "isp":"bell",
-  "down (Mbps)":"10",
-  "up (Mbps)":"0.93",
-  "cap (GB)":"100",
-  "price (CAD)":49.95
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "150",
-  "up (Mbps)": "15",
-  "price (CAD)": "104.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "1000",
-  "up (Mbps)": "30",
-  "price (CAD)": "124.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "500",
-  "up (Mbps)": "20",
-  "price (CAD)": "114.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "75",
-  "up (Mbps)": "10",
-  "price (CAD)": "94.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "75",
-  "up (Mbps)": "10",
-  "price (CAD)": "89.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "1000",
-  "up (Mbps)": "30",
-  "price (CAD)": "119.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "150",
-  "up (Mbps)": "15",
-  "price (CAD)": "99.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "rogers",
-  "down (Mbps)": "500",
-  "up (Mbps)": "20",
-  "price (CAD)": "109.99",
-  "cap (GB)": "Unlimited"
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": 200,
-  "down (Mbps)": 5,
-  "up (Mbps)": 1,
-  "price (CAD)": 34.95
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": "Unlimited",
-  "down (Mbps)": 5,
-  "up (Mbps)": 1,
-  "price (CAD)": 39.95
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": "Unlimited",
-  "down (Mbps)": 30,
-  "up (Mbps)": 5,
-  "price (CAD)": 59.95
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": "Unlimited",
-  "down (Mbps)": 75,
-  "up (Mbps)": 10,
-  "price (CAD)": 68.95
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": "Unlimited",
-  "down (Mbps)": 150,
-  "up (Mbps)": 15,
-  "price (CAD)": 77.95
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": "Unlimited",
-  "down (Mbps)": 500,
-  "up (Mbps)": 20,
-  "price (CAD)": 104.95
-},
-{
-  "isp": "teksavvy",
-  "cap (GB)": "Unlimited",
-  "down (Mbps)": 1024,
-  "up (Mbps)": 30,
-  "price (CAD)": 114.95
-},
-{
-  "isp":"primus",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":100.95,
-  "down (Mbps)":"300",
-  "up (Mbps)":"20"
-},
-{
-  "isp":"primus",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":78.95,
-  "down (Mbps)":"150",
-  "up (Mbps)":"15"
-},
-{
-  "isp":"primus",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":69.95,
-  "down (Mbps)":"75",
-  "up (Mbps)":"10"
-},
-{
-  "isp":"primus",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":66.95,
-  "down (Mbps)":"50",
-  "up (Mbps)":"10"
-},
-{
-  "isp":"primus",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":59.95,
-  "down (Mbps)":"25",
-  "up (Mbps)":"10"
-},
-{
-  "isp":"primus",
-  "cap (GB)":"Unlimited",
-  "price (CAD)":49.95,
-  "down (Mbps)":"15",
-  "up (Mbps)":"10"
-},
-{}]
+  "pivot": {
+    "title": "isp",
+    "diff": "price (CAD)"
+  },
+  "data": [
+    {
+      "isp": "bell",
+      "down (Mbps)": "1500",
+      "up (Mbps)": "940",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 124.95
+    },
+    {
+      "isp": "bell",
+      "down (Mbps)": "1000",
+      "up (Mbps)": "750",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 114.95
+    },
+    {
+      "isp": "bell",
+      "down (Mbps)": "500",
+      "up (Mbps)": "500",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 104.95
+    },
+    {
+      "isp": "bell",
+      "down (Mbps)": "150",
+      "up (Mbps)": "150",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 94.95
+    },
+    {
+      "isp": "bell",
+      "down (Mbps)": "50",
+      "up (Mbps)": "10",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 79.95
+    },
+    {
+      "isp": "bell",
+      "down (Mbps)": "10",
+      "up (Mbps)": "0.93",
+      "cap (GB)": "100",
+      "price (CAD)": 49.95
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "150",
+      "up (Mbps)": "15",
+      "price (CAD)": "104.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "1000",
+      "up (Mbps)": "30",
+      "price (CAD)": "124.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "500",
+      "up (Mbps)": "20",
+      "price (CAD)": "114.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "75",
+      "up (Mbps)": "10",
+      "price (CAD)": "94.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "75",
+      "up (Mbps)": "10",
+      "price (CAD)": "89.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "1000",
+      "up (Mbps)": "30",
+      "price (CAD)": "119.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "150",
+      "up (Mbps)": "15",
+      "price (CAD)": "99.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "rogers",
+      "down (Mbps)": "500",
+      "up (Mbps)": "20",
+      "price (CAD)": "109.99",
+      "cap (GB)": "Unlimited"
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": 200,
+      "down (Mbps)": 5,
+      "up (Mbps)": 1,
+      "price (CAD)": 34.95
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": "Unlimited",
+      "down (Mbps)": 5,
+      "up (Mbps)": 1,
+      "price (CAD)": 39.95
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": "Unlimited",
+      "down (Mbps)": 30,
+      "up (Mbps)": 5,
+      "price (CAD)": 59.95
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": "Unlimited",
+      "down (Mbps)": 75,
+      "up (Mbps)": 10,
+      "price (CAD)": 68.95
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": "Unlimited",
+      "down (Mbps)": 150,
+      "up (Mbps)": 15,
+      "price (CAD)": 77.95
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": "Unlimited",
+      "down (Mbps)": 500,
+      "up (Mbps)": 20,
+      "price (CAD)": 104.95
+    },
+    {
+      "isp": "teksavvy",
+      "cap (GB)": "Unlimited",
+      "down (Mbps)": 1024,
+      "up (Mbps)": 30,
+      "price (CAD)": 114.95
+    },
+    {
+      "isp": "primus",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 100.95,
+      "down (Mbps)": "300",
+      "up (Mbps)": "20"
+    },
+    {
+      "isp": "primus",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 78.95,
+      "down (Mbps)": "150",
+      "up (Mbps)": "15"
+    },
+    {
+      "isp": "primus",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 69.95,
+      "down (Mbps)": "75",
+      "up (Mbps)": "10"
+    },
+    {
+      "isp": "primus",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 66.95,
+      "down (Mbps)": "50",
+      "up (Mbps)": "10"
+    },
+    {
+      "isp": "primus",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 59.95,
+      "down (Mbps)": "25",
+      "up (Mbps)": "10"
+    },
+    {
+      "isp": "primus",
+      "cap (GB)": "Unlimited",
+      "price (CAD)": 49.95,
+      "down (Mbps)": "15",
+      "up (Mbps)": "10"
+    },
+    {}
+  ]
+}
