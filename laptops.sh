@@ -8,6 +8,8 @@
 ## Linux
 #
 
+#system76
+#  all plastic
 while read -r URL ; do
 	curl -s "$URL"
 	#curl -s https://system76.com/laptops/addw2/configure
@@ -19,13 +21,24 @@ done < <(curl -s https://system76.com/laptops \
 	| grep "configure" \
 	| sort -u)
 
+#tuxedocomputers
+#  2.258,10 EUR reviews are iffy plastic
 #https://www.tuxedocomputers.com/en/Linux-Hardware/Linux-Notebooks.tuxedo
+#https://www.tuxedocomputers.com/en/Linux-Hardware/Linux-Notebooks/Alle.tuxedo#!#1278,1331
+#https://www.tuxedocomputers.com/en/Linux-Hardware/Linux-Notebooks/15-16-inch/TUXEDO-Book-XP15-Gen11.tuxedo
 
+#dell
+#  only intel/IPS/16GB RAM CAD $2,109.99 
 #https://www.dell.com/en-ca/shop/scc/sc/laptops
 #https://www.dell.com/en-ca/work/shop/scc/sc/laptops
+#https://www.dell.com/en-ca/work/shop/laptops-ultrabooks/new-dell-xps-13-9300-developer-edition/spd/xps-13-9300-laptop/ctox13w10p1c2200uca?view=configurations&configurationid=731070c4-4731-40f9-8ab3-148be5117c65
 
+#lenovo
+#  only intel/IPS/16GB RAM $3,820.00
 #https://www.lenovo.com/ca/en/laptops/c/LAPTOPS
 
+# 
+#  busted website but Aluminum , only intel/IPS
 #https://slimbook.es/en/store/essential
 
 #

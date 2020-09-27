@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "language": "Java",
+      "Development kit (Bytes)": "342000000",
+      "Runtime (Bytes)": "166000000",
+      "Resident memory (Bytes)": "39976",
+      "Resident memory 99 (Bytes)": "40428",
+      "Start time (Seconds)": "0.45",
+      "99 start times (Seconds)": "44.49"
+    },
+    {
+      "language": "Graal-native",
+      "Development kit (Bytes)": "1342000000",
+      "Runtime (Bytes)": "6932",
+      "Resident memory (Bytes)": "4764",
+      "Resident memory 99 (Bytes)": "5256",
+      "Start time (Seconds)": "0",
+      "99 start times (Seconds)": "0.25"
+    },
+    {
+      "language": "Rust",
+      "Development kit (Bytes)": "321000000",
+      "Runtime (Bytes)": "7260",
+      "Resident memory (Bytes)": "1500",
+      "Resident memory 99 (Bytes)": "3212",
+      "Start time (Seconds)": "0",
+      "99 start times (Seconds)": "0.14"
+    },
+    {
+      "language": "C",
+      "Development kit (Bytes)": "51200",
+      "Runtime (Bytes)": "12",
+      "Resident memory (Bytes)": "1176",
+      "Resident memory 99 (Bytes)": "3148",
+      "Start time (Seconds)": "0",
+      "99 start times (Seconds)": "0.13"
+    }
+  ]
+}
