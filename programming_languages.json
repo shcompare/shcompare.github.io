@@ -15,7 +15,7 @@
       "Runtime (Bytes)": "6932",
       "Resident memory (Bytes)": "4764",
       "Resident memory 99 (Bytes)": "5256",
-      "Start time (Seconds)": "0",
+      "Start time (Seconds)": "0.00",
       "99 start times (Seconds)": "0.25"
     },
     {
@@ -24,7 +24,7 @@
       "Runtime (Bytes)": "7260",
       "Resident memory (Bytes)": "1500",
       "Resident memory 99 (Bytes)": "3212",
-      "Start time (Seconds)": "0",
+      "Start time (Seconds)": "0.00",
       "99 start times (Seconds)": "0.14"
     },
     {
@@ -33,7 +33,7 @@
       "Runtime (Bytes)": "12",
       "Resident memory (Bytes)": "1176",
       "Resident memory 99 (Bytes)": "3148",
-      "Start time (Seconds)": "0",
+      "Start time (Seconds)": "0.00",
       "99 start times (Seconds)": "0.13"
     }
   ]
