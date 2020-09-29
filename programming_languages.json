@@ -1,40 +1,60 @@
 {
   "data": [
     {
-      "language": "Java",
-      "Development kit (Bytes)": "342000000",
-      "Runtime (Bytes)": "166000000",
-      "Resident memory (Bytes)": "39976",
-      "Resident memory 99 (Bytes)": "40428",
-      "Start time (Seconds)": "0.45",
-      "99 start times (Seconds)": "44.49"
-    },
-    {
-      "language": "Graal-native",
-      "Development kit (Bytes)": "1342000000",
-      "Runtime (Bytes)": "6932",
-      "Resident memory (Bytes)": "4764",
-      "Resident memory 99 (Bytes)": "5256",
+      "language": "C",
+      "Development kit (Bytes)": "51200",
+      "Runtime (Bytes)": "550488",
+      "Resident memory (Bytes)": "484000",
+      "99 resident memories (Bytes)": "3256000",
+      "Compile time (Seconds)": "0.200",
       "Start time (Seconds)": "0.00",
-      "99 start times (Seconds)": "0.25"
+      "99 start times (Seconds)": "0.11",
+      "Test": "Hello World"
     },
     {
       "language": "Rust",
-      "Development kit (Bytes)": "321000000",
-      "Runtime (Bytes)": "7260",
-      "Resident memory (Bytes)": "1500",
-      "Resident memory 99 (Bytes)": "3212",
+      "Development kit (Bytes)": "1553500000",
+      "Runtime (Bytes)": "7430160",
+      "Resident memory (Bytes)": "1608000",
+      "99 resident memories (Bytes)": "3096000",
+      "Compile time (Seconds)": "1.063",
       "Start time (Seconds)": "0.00",
-      "99 start times (Seconds)": "0.14"
+      "99 start times (Seconds)": "0.15",
+      "Test": "Hello World"
     },
     {
-      "language": "C",
-      "Development kit (Bytes)": "51200",
-      "Runtime (Bytes)": "12",
-      "Resident memory (Bytes)": "1176",
-      "Resident memory 99 (Bytes)": "3148",
+      "language": "Java",
+      "Development kit (Bytes)": "358000000",
+      "Runtime (Bytes)": "192000000",
+      "Resident memory (Bytes)": "31736000",
+      "99 resident memories (Bytes)": "46948000",
+      "Compile time (Seconds)": "1.752",
+      "Start time (Seconds)": "0.51",
+      "99 start times (Seconds)": "42.40",
+      "Test": "Hello World"
+    },
+    {
+      "language": "JLink",
+      "Development kit (Bytes)": "358000000",
+      "Runtime (Bytes)": "301880000",
+      "Resident memory (Bytes)": "33424000",
+      "99 resident memories (Bytes)": "47384000",
+      "Compile time (Seconds)": "13.244",
+      "Start time (Seconds)": "0.30",
+      "99 start times (Seconds)": "38.41",
+      "Test": "Hello World"
+    },
+    {
+      "language": "Graal-native",
+      "Development kit (Bytes)": "1395576000",
+      "Runtime (Bytes)": "7092688",
+      "Resident memory (Bytes)": "4896000",
+      "99 resident memories (Bytes)": "5092000",
+      "Compile time (Seconds)": "85.906",
       "Start time (Seconds)": "0.00",
-      "99 start times (Seconds)": "0.13"
-    }
+      "99 start times (Seconds)": "0.24",
+      "Test": "Hello World"
+    },
+    {}
   ]
 }

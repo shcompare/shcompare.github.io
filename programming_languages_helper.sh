@@ -7,7 +7,7 @@
 N=99
 if [ "$1" == "O" ] ; then
 	while read -r I ; do
-		echo "$I" > /dev/null
+		echo -n > /dev/null
 	done  < <(seq 1 $N)
 elif [ "$1" == "B" ] ; then
 	while read -r I ; do
@@ -24,6 +24,10 @@ elif [ "$1" == "R" ] ; then
 elif [ "$1" == "G" ] ; then
 	while read -r I ; do
 		./HelloGraal "World$I" > /dev/null
+	done  < <(seq 1 $N)
+elif [ "$1" == "L" ] ; then
+	while read -r I ; do
+		./HelloJlink/bin/java --module HelloJlink/test.HelloJlink WorldL "World$I" > /dev/null
 	done  < <(seq 1 $N)
 elif [ "$1" == "J" ] ; then
 	while read -r I ; do
