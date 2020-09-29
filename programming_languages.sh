@@ -40,7 +40,6 @@ h2s(){
 	T="$(echo "$T+($TM*60)+($TH*60*60)" | bc)"
 	echo "$T"
 }
-export -f h2s
 echo "{\"data\":["
 TEST="Hello World"
 #C
@@ -106,6 +105,13 @@ J8="$(/usr/bin/time -v bash "$HELPER" J 2>&1 | grep 'User time' | perl -pe 's/.*
 log "Java" "$J2" "$J3" "$J4" "$J5" "$J6" "$J7" "$J8" "$TEST"
 
 #Jlink
+JAVA="$(find /opt/ -maxdepth 1 -iname 'jdk*' | grep -P "15" | head -n 1)"
+if ! [ -f "$JAVA" ] ; then
+	wget -q "https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15%2B36/OpenJDK15U-jdk_$(uname -p)_linux_hotspot_15_36.tar.gz"
+	tar -xf OpenJDK15U-jdk_*.tar.gz
+	rm OpenJDK15U-jdk_*.tar.gz
+	JAVA="$(find /opt/ -maxdepth 1 -iname 'jdk*' | grep -P "15" | head -n 1)"
+fi
 L2="$J2"
 echo "package test;
 public class HelloJlink {
@@ -114,12 +120,12 @@ public class HelloJlink {
 	}
 }" > HelloJlink.java
 echo "module HelloJlink {
-}" > module-info.java 
+}" > module-info.java
 mkdir jlinktest
 L6="$( (time (
-javac -d jlinktest module-info.java
-javac -d jlinktest --module-path jlinktest HelloJlink.java
-jlink --module-path /usr/lib/jvm/java-11-openjdk-arm64/jmods:jlinktest --add-modules HelloJlink --output HelloJlink
+$JAVA/bin/javac -d jlinktest module-info.java
+$JAVA/bin/javac -d jlinktest --module-path jlinktest HelloJlink.java
+$JAVA/bin/jlink --module-path $JAVA/jmods:jlinktest --add-modules HelloJlink --output HelloJlink
 ) ) 2>&1 | grep real | perl -pe 's/.*\t//g;s/0m|s//g')"
 L3="$(du -s HelloJlink | perl -pe 's/\t.*//g;s/\n/000/g')"
 L4="$(/usr/bin/time -v ./HelloJlink/bin/java --module HelloJlink/test.HelloJlink WorldL 2>&1 | grep 'Maximum resident' | perl -pe 's/.* //g;s/\n/000/g')"
@@ -133,7 +139,8 @@ D="$(find /opt -maxdepth 1 -type d -name 'graalvm*' | head -n 1)"
 if ! [ -d "$D" ] ; then
 	(
 	cd /opt
-	wget -q 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.2.0/graalvm-ce-java11-linux-amd64-20.2.0.tar.gz'
+	wget -q "https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.2.0/graalvm-ce-java11-linux-$(uname -p)-20.2.0.tar.gz"
+	tar -xf graalvm-*.tar.gz
 	rm graalvm-*.tar.gz
 	./graalvm-*/bin/gu install native-image > /dev/null
 	)
