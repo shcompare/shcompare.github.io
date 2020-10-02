@@ -78,7 +78,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     println!(\"Hello {}.\", &args[1]);
 }" >  HelloRust.rs 
-R6="$( (time rustc HelloRust.rs) 2>&1 | grep real | perl -pe 's/.*\t//g;s/0m|s//g')"
+R6="$( (time rustc -C opt-level=3 HelloRust.rs) 2>&1 | grep real | perl -pe 's/.*\t//g;s/0m|s//g')"
 R3="$(stat -c %s HelloRust)"
 R4="$(/usr/bin/time -v ./HelloRust WorldR 2>&1 | grep 'Maximum resident' | perl -pe 's/.* //g;s/\n/000/g')"
 R5="$(/usr/bin/time -v bash "$HELPER" R 2>&1 | grep 'Maximum resident' | perl -pe 's/.* //g;s/\n/000/g')"
@@ -123,9 +123,9 @@ echo "module HelloJlink {
 }" > module-info.java
 mkdir jlinktest
 L6="$( (time (
-$JAVA/bin/javac -d jlinktest module-info.java
-$JAVA/bin/javac -d jlinktest --module-path jlinktest HelloJlink.java
-$JAVA/bin/jlink --module-path $JAVA/jmods:jlinktest --add-modules HelloJlink --output HelloJlink
+"$JAVA/bin/javac" -d jlinktest module-info.java
+"$JAVA/bin/javac" -d jlinktest --module-path jlinktest HelloJlink.java
+"$JAVA/bin/jlink" --module-path "$JAVA/jmods:jlinktest" --add-modules HelloJlink --output HelloJlink
 ) ) 2>&1 | grep real | perl -pe 's/.*\t//g;s/0m|s//g')"
 L3="$(du -s HelloJlink | perl -pe 's/\t.*//g;s/\n/000/g')"
 L4="$(/usr/bin/time -v ./HelloJlink/bin/java --module HelloJlink/test.HelloJlink WorldL 2>&1 | grep 'Maximum resident' | perl -pe 's/.* //g;s/\n/000/g')"
